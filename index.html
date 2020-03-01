@@ -1,0 +1,140 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lake Louise Sore</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.jpg" />
+  </head>
+
+  <body>
+    <script src="scripts.js"></script>
+
+    <div class="card" id="card0">
+      <h1>Lake Louise Score</h1>
+      <p>The Lake Louise Score is a tool for diagnosing the Acute Mountain Sickness (AMS) and assessing its severity. It is based on self-assessment and does not take external/environmental paramters into account so far. The diagnostic criteria, the scoring system for symptoms and signs of Actue Mountain Sickness and the resulting recommendations were designed by the Lake Louise AMS Scoring Consensus Committee.</p>
+      <button class="nextButton" onclick="switchTo(card1)">Start</button>
+    </div>
+
+    <div class="card" id="card1">
+      <form>
+        <h3 class="cardText">Headache:</h3>
+        <fieldset>
+          <input type="radio" id="h_0" name="r_h" value="0">
+          <label for="h_0"> 0: No headache</label> <br/>
+          <input type="radio" id="h_1" name="r_h" value="1">
+          <label for="h_1"> 1: Mild headache</label> <br/>
+          <input type="radio" id="h_2" name="r_h" value="2">
+          <label for="h_2"> 2: Moderate headache</label> <br/>
+            <input type="radio" id="h_3" name="r_h" value="3">
+          <label for="h_3"> 3: Severe headache, incapacitating</label> <br/>
+        </fieldset>
+      </form>
+      <button class="nextButton" onclick="switchTo(card2)">Next</button>
+      <button class="previousButton" onclick="switchTo(card0)">Previous</button>
+      <div class="progress"></div>
+    </div>
+
+    <div class="card" id="card2">
+      <form>
+        <h3 class="cardText">Gastrointestinal symptoms:</h3>
+        <fieldset>
+          <input type="radio" id="g_0" name="r_g" value="0">
+          <label for="g_0"> 0: None</label> <br/>
+          <input type="radio" id="g_1" name="r_g" value="1">
+          <label for="g_1"> 1: Poor appetite or nausea</label> <br/>
+          <input type="radio" id="g_2" name="r_g" value="2">
+          <label for="g_2"> 2: Moderate nausea and/or vomiting</label> <br/>
+            <input type="radio" id="g_3" name="r_g" value="3">
+          <label for="g_3"> 3: Severe nausea and/or vomiting</label> <br/>
+        </fieldset>
+      </form>
+      <button class="nextButton" onclick="switchTo(card3)">Next</button>
+      <button class="previousButton" onclick="switchTo(card1)">Previous</button>
+      <div class="progress"></div>
+    </div>
+
+    <div class="card" id="card3">
+      <form>
+        <h3 class="cardText">Fatigue and/or weakness:</h3>
+        <fieldset>
+          <input type="radio" id="f_0" name="r_f" value="0">
+          <label for="f_0"> 0: Not tired or weak</label> <br/>
+          <input type="radio" id="f_1" name="r_f" value="1">
+          <label for="f_1"> 1: Mild fatigue/weakness</label> <br/>
+          <input type="radio" id="f_2" name="r_f" value="2">
+          <label for="f_2"> 2: Moderate fatigue/weakness</label> <br/>
+            <input type="radio" id="f_3" name="r_f" value="3">
+          <label for="f_3"> 3: Severe fatigue, incapacitating</label> <br/>
+        </fieldset>
+      </form>
+      <button class="nextButton" onclick="switchTo(card4)">Next</button>
+      <button class="previousButton" onclick="switchTo(card2)">Previous</button>
+      <div class="progress"></div>
+    </div>
+
+    <div class="card" id="card4">
+      <form>
+        <h3 class="cardText">Dizziness/light-headedness:</h3>
+        <fieldset>
+          <input type="radio" id="d_0" name="r_d" value="0">
+          <label for="d_0"> 0: No diziness/light-headedness</label> <br/>
+          <input type="radio" id="d_1" name="r_d" value="1">
+          <label for="d_1"> 1: Mild dizziness/light-headedness</label> <br/>
+          <input type="radio" id="d_2" name="r_d" value="2">
+          <label for="d_2"> 2: Moderate diziness/light-headedness</label> <br/>
+            <input type="radio" id="d_3" name="r_d" value="3">
+          <label for="d_3"> 3: Severe dizziness/light-headednes, incapacitating</label> <br/>
+        </fieldset>
+      </form>
+      <button class="nextButton" onclick="switchTo(card5)">Next</button>
+      <button class="previousButton" onclick="switchTo(card3)">Previous</button>
+      <div class="progress"></div>
+    </div>
+
+    <div class="card" id="card5">
+      <form>
+        <h3 class="cardText">Difficulty sleeping:</h3>
+        <fieldset>
+          <input type="radio" id="s_0" name="r_s" value="0">
+          <label for="s_0"> 0: Slept as well as usual</label> <br/>
+          <input type="radio" id="s_1" name="r_s" value="1">
+          <label for="s_1"> 1: Did not sleep as well as usual</label> <br/>
+          <input type="radio" id="s_2" name="r_s" value="2">
+          <label for="s_2"> 2: Woke many times, poor sleep</label> <br/>
+            <input type="radio" id="s_3" name="r_s" value="3">
+          <label for="s_3"> 3: Could not sleep at all</label> <br/>
+        </fieldset>
+      </form>
+      <button class="nextButton" onclick="switchTo(card6)">Next</button>
+      <button class="previousButton" onclick="switchTo(card4)">Previous</button>
+      <div class="progress"></div>
+    </div>
+
+    <div class="card" id="card6">
+      <form>
+        <h3 class="cardText">AMS Clinical Functional Score:</h3> <p>Overall, if you had AMS symptoms before, how did they affect your acivities?</p>
+        <fieldset>
+          <input type="radio" id="a_0" name="r_a" value="0">
+          <label for="a_0"> 0: Not at all</label> <br/>
+          <input type="radio" id="a_1" name="r_a" value="1">
+          <label for="a_1"> 1: Symptoms present, but did not force any change in activity or itinerary</label> <br/>
+          <input type="radio" id="a_2" name="r_a" value="2">
+          <label for="a_2"> 2: My symptoms forced me to stop the ascent or to go down on my own power</label> <br/>
+            <input type="radio" id="a_3" name="r_a" value="3">
+          <label for="a_3"> 3: Had to be evacuated to a lower altitude</label> <br/>
+        </fieldset>
+      </form>
+      <button class="nextButton" onclick="showResult()">Show Result</button>
+      <button class="previousButton" onclick="switchTo(card5)">Previous</button>
+      <div class="progress"></div>
+    </div>
+
+    <div class="card" id="cardResult">
+      <h3>Result: <span id="resultDisplay">--</span></h3>
+      <p id="resultText"></p>
+      <button class="previousButton" onclick="switchTo(card0)">Start over</button>
+    </div>
+  </body>
+</html>
